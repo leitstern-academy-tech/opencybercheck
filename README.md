@@ -26,7 +26,7 @@ The OpenCyberCheck project will be structured around the following fundamental c
 
 **Risk Prioritization:** A system that classifies findings based on severity, determining which issues users should address first.
 
-**Security Control Mapping:** A reference layer that links technical findings to relevant categories within security frameworks such as relevant security frameworks and regulatory references, including NIS2, CIS Controls and applicable BSI guidance without duplicating the protected standard texts.
+**Security Control Mapping:** A reference layer that links technical findings to relevant security frameworks and regulatory references, including NIS2, CIS Controls and applicable BSI guidance without duplicating the protected standard texts.
 
 **Remediation Guidance:** Actionable and verifiable remediation steps for each identified security issue.
 
