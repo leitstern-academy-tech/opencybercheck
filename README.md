@@ -91,3 +91,8 @@ Do not upload credentials, personal data, customer information, or sensitive inf
 Unless otherwise specified, all contributions will be licensed under the repository’s AGPL-3.0 license.
 
 ## License
+OpenCyberCheck is licensed under the GNU Affero General Public License version 3.0 (AGPL-3.0).
+
+You may use, study, modify, and redistribute this software in accordance with the terms of the license. If you modify the software and make it available to users over a network, you must also make the corresponding source code available under the AGPL-3.0.
+
+See the LICENSE file for the complete license terms.
