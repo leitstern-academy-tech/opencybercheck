@@ -78,11 +78,11 @@ The roadmap is subject to updates based on technical developments, user feedback
 ## Contributing
 We welcome contributions, suggestions, and feedback. You can support the project, which is currently in its early development stage, by:
 
-Suggesting relevant use cases and security rules.
-Reviewing documentation and technical designs.
-Testing sample assessment profiles and reporting reproducible issues.
-Improving remediation guidance and security control mappings.
-Sharing non-sensitive sample data for testing purposes.
+-Suggesting relevant use cases and security rules.
+-Reviewing documentation and technical designs.
+-Testing sample assessment profiles and reporting reproducible issues.
+-Improving remediation guidance and security control mappings.
+-Sharing non-sensitive sample data for testing purposes.
 
 Before initiating substantial changes, please open an issue to discuss your proposed approach. Pull requests should be focused and include relevant documentation and tests where appropriate.
 
@@ -95,4 +95,4 @@ OpenCyberCheck is licensed under the GNU Affero General Public License version 3
 
 You may use, study, modify, and redistribute this software in accordance with the terms of the license. If you modify the software and make it available to users over a network, you must also make the corresponding source code available under the AGPL-3.0.
 
-See the LICENSE file for the complete license terms.
+See the [LICENSE](LICENSE) file for the complete license terms.
