@@ -1,1 +1,39 @@
+schema_version: "0.1"
 
+organisation:
+  name: "Example Manufacturing GmbH"
+  size: "small"
+  sector: "manufacturing"
+  country_code: "DE"
+
+authentication:
+  unique_user_accounts: true
+  mfa_for_administrators: true
+  mfa_for_all_users: false
+
+remote_access:
+  enabled: true
+  mfa_enabled: false
+  encrypted_protocol: true
+
+backups:
+  enabled: true
+  encrypted: true
+  offline_or_immutable_copy: false
+  restore_tested: true
+  days_since_last_restore_test: 120
+
+patch_management:
+  documented_process: true
+  automatic_updates: true
+  maximum_days_for_critical_updates: 14
+
+logging:
+  security_logging_enabled: true
+  centralised_logging: false
+  retention_days: 30
+
+incident_response:
+  documented_plan: false
+  responsible_person_assigned: true
+  plan_tested: false
