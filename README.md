@@ -9,6 +9,13 @@ SMEs often struggle to access affordable and transparent tools for assessing the
 OpenCyberCheck will provide an open-source, locally deployable toolkit designed to assess the cybersecurity posture of SMEs. The system analyzes structured asset and security data using transparent, customizable rules defined in machine-readable YAML or JSON formats. The toolkit prioritizes identified risks, maps technical findings to relevant security control references, and generates actionable recommendations for improvement. The results are presented in both human-readable reports and machine-processable formats, enabling users and other systems to review, reuse, and integrate the findings without reliance on a proprietary cloud platform.
 
 ## Target users
+OpenCyberCheck’s primary users are European SMEs seeking a practical way to assess and improve their cybersecurity posture without deploying complex commercial platforms.
+
+The toolkit may also support:
+
+- Small IT service providers and cybersecurity consultants conducting structured security assessments for their clients.
+
+- Educational institutions and training providers using transparent rules and sample scenarios to teach fundamental security controls and remediation processes in hands-on learning environments.
 
 ## Core components
 
