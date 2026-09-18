@@ -1,1 +1,37 @@
+id: "OCC-INCIDENT-001"
+version: "0.1.0"
 
+title: "Documented incident response plan is missing"
+
+description: >-
+  Without a documented incident response plan, an organisation may respond
+  inconsistently or too slowly when a cybersecurity incident occurs.
+
+category: "incident_response"
+severity: "high"
+
+condition:
+  path: "incident_response.documented_plan"
+  operator: "equals"
+  expected: false
+
+message: >-
+  The organisation does not have a documented incident response plan.
+
+remediation: >-
+  Create and maintain an incident response plan that defines responsibilities,
+  escalation paths, internal and external communication procedures, evidence
+  handling, containment, recovery, and post-incident review activities.
+  Assign an owner to the plan and test it regularly using realistic scenarios.
+
+references:
+  - framework: "CIS Controls v8"
+    reference: "Safeguard 17.4 — Establish and Maintain an Incident Response Process"
+
+  - framework: "NIS2 Directive"
+    reference: "Article 21(2)(b) — Incident handling"
+
+tags:
+  - "incident-response"
+  - "governance"
+  - "resilience"
