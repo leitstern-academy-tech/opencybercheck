@@ -37,7 +37,7 @@ OpenCyberCheck will follow privacy-by-design and secure-by-default principles:
 
 **Local-First Processing:** Security and asset data are processed locally by default, without the need to transmit them to a proprietary cloud service.
 
-**Data Minimization: ** The toolkit will be designed to request and retain only the information necessary to perform the selected security checks.
+**Data Minimization:** The toolkit will be designed to request and retain only the information necessary to perform the selected security checks.
 
 **User Control:**  Users retain full control over assessment data, configuration files, and generated reports.
 
@@ -48,6 +48,15 @@ OpenCyberCheck will follow privacy-by-design and secure-by-default principles:
 **Non-Intrusive Operation:**  The initial version analyzes information provided directly by the user; it does not conduct intrusive testing or active penetration activities.
 
 ## Project status
+OpenCyberCheck is currently in the early planning and design phase. The project's public repository, initial scope, and open-source license have been established.
+
+The next steps are:
+
+- Defining the technical architecture and rule schema.
+- Developing a minimal proof of concept (PoC).
+- Validating the initial security checks using sample data.
+
+The project is not yet ready for production use. Its interfaces and assessment rules may change during the development process.
 
 ## Roadmap
 
