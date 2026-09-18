@@ -1,1 +1,178 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/leitstern-academy-tech/opencybercheck/raw/main/schemas/assessment-profile.schema.json",
+  "title": "OpenCyberCheck Assessment Profile",
+  "description": "Schema for a locally processed SME cybersecurity assessment profile.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "schema_version",
+    "organisation",
+    "authentication",
+    "remote_access",
+    "backups",
+    "patch_management",
+    "logging",
+    "incident_response"
+  ],
+  "properties": {
+    "schema_version": {
+      "type": "string",
+      "const": "0.1"
+    },
+    "organisation": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "size"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 200,
+          "description": "Optional organisation name. A fictional identifier may be used."
+        },
+        "size": {
+          "type": "string",
+          "enum": [
+            "micro",
+            "small",
+            "medium"
+          ]
+        },
+        "sector": {
+          "type": "string",
+          "minLength": 1,
+          "maxLength": 100
+        },
+        "country_code": {
+          "type": "string",
+          "pattern": "^[A-Z]{2}$",
+          "description": "ISO 3166-1 alpha-2 country code."
+        }
+      }
+    },
+    "authentication": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "unique_user_accounts",
+        "mfa_for_administrators"
+      ],
+      "properties": {
+        "unique_user_accounts": {
+          "type": "boolean"
+        },
+        "mfa_for_administrators": {
+          "type": "boolean"
+        },
+        "mfa_for_all_users": {
+          "type": "boolean"
+        }
+      }
+    },
+    "remote_access": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "mfa_enabled": {
+          "type": "boolean"
+        },
+        "encrypted_protocol": {
+          "type": "boolean"
+        }
+      }
+    },
+    "backups": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "enabled",
+        "encrypted",
+        "restore_tested"
+      ],
+      "properties": {
+        "enabled": {
+          "type": "boolean"
+        },
+        "encrypted": {
+          "type": "boolean"
+        },
+        "offline_or_immutable_copy": {
+          "type": "boolean"
+        },
+        "restore_tested": {
+          "type": "boolean"
+        },
+        "days_since_last_restore_test": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "patch_management": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "documented_process",
+        "automatic_updates"
+      ],
+      "properties": {
+        "documented_process": {
+          "type": "boolean"
+        },
+        "automatic_updates": {
+          "type": "boolean"
+        },
+        "maximum_days_for_critical_updates": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "logging": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "security_logging_enabled"
+      ],
+      "properties": {
+        "security_logging_enabled": {
+          "type": "boolean"
+        },
+        "centralised_logging": {
+          "type": "boolean"
+        },
+        "retention_days": {
+          "type": "integer",
+          "minimum": 0
+        }
+      }
+    },
+    "incident_response": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "documented_plan"
+      ],
+      "properties": {
+        "documented_plan": {
+          "type": "boolean"
+        },
+        "responsible_person_assigned": {
+          "type": "boolean"
+        },
+        "plan_tested": {
+          "type": "boolean"
+        }
+      }
+    }
+  }
+}
