@@ -33,6 +33,19 @@ The OpenCyberCheck project will be structured around the following fundamental c
 **Reporting and Integration Formats:** Human-readable reports and machine-processable JSON or CSV outputs that enable the review, reuse, or integration of findings with other tools.
 
 ## Privacy and security principles
+OpenCyberCheck will follow privacy-by-design and secure-by-default principles:
+
+**Local-First Processing:** Security and asset data are processed locally by default, without the need to transmit them to a proprietary cloud service.
+
+**Data Minimization: ** The toolkit will be designed to request and retain only the information necessary to perform the selected security checks.
+
+**User Control:**  Users retain full control over assessment data, configuration files, and generated reports.
+
+**Transparent Assessments:** Findings are generated through documented and auditable rules, rather than opaque or "black-box" decision-making mechanisms.
+
+**Secure Handling of Sensitive Data:**  The toolkit will not require credentials or unnecessary sensitive data, and such information should not be included in configuration files or generated reports.
+
+**Non-Intrusive Operation:**  The initial version analyzes information provided directly by the user; it does not conduct intrusive testing or active penetration activities.
 
 ## Project status
 
