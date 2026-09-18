@@ -1,1 +1,38 @@
+id: "OCC-BACKUP-001"
+version: "0.1.0"
 
+title: "Backup restoration test is overdue"
+
+description: >-
+  Backups that are not restored and tested regularly may be incomplete,
+  corrupted, inaccessible, or unsuitable for recovering critical systems
+  following an incident.
+
+category: "backups"
+severity: "high"
+
+condition:
+  path: "backups.days_since_last_restore_test"
+  operator: "greater_than"
+  expected: 90
+
+message: >-
+  The most recent backup restoration test was performed more than 90 days ago.
+
+remediation: >-
+  Perform a controlled restoration test using representative backup data.
+  Verify that the restored data is complete, readable, and usable within the
+  organisation's recovery objectives. Document the test result, address any
+  failures, and establish a recurring restoration-test schedule.
+
+references:
+  - framework: "CIS Controls v8"
+    reference: "Safeguard 11.5 — Test Data Recovery"
+
+  - framework: "NIS2 Directive"
+    reference: "Article 21(2)(c) — Business continuity and backup management"
+
+tags:
+  - "backup"
+  - "recovery"
+  - "resilience"
