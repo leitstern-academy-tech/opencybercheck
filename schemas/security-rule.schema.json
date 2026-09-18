@@ -1,1 +1,148 @@
-
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/leitstern-academy-tech/opencybercheck/raw/main/schemas/security-rule.schema.json",
+  "title": "OpenCyberCheck Security Rule",
+  "description": "Schema for transparent and machine-readable OpenCyberCheck security rules.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "id",
+    "version",
+    "title",
+    "description",
+    "category",
+    "severity",
+    "condition",
+    "message",
+    "remediation"
+  ],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^OCC-[A-Z]+-[0-9]{3}$",
+      "description": "Stable rule identifier, for example OCC-AUTH-001."
+    },
+    "version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+\\.[0-9]+$",
+      "description": "Semantic version of the rule."
+    },
+    "title": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 150
+    },
+    "description": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 1000
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "authentication",
+        "remote_access",
+        "backups",
+        "patch_management",
+        "logging",
+        "incident_response"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "informational",
+        "low",
+        "medium",
+        "high",
+        "critical"
+      ]
+    },
+    "condition": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "path",
+        "operator"
+      ],
+      "properties": {
+        "path": {
+          "type": "string",
+          "pattern": "^[a-z][a-z0-9_]*(\\.[a-z][a-z0-9_]*)*$",
+          "description": "Dot-separated path to a value in the assessment profile."
+        },
+        "operator": {
+          "type": "string",
+          "enum": [
+            "equals",
+            "not_equals",
+            "less_than",
+            "less_than_or_equal",
+            "greater_than",
+            "greater_than_or_equal",
+            "missing"
+          ]
+        },
+        "expected": {
+          "description": "Expected value used by the selected comparison operator.",
+          "type": [
+            "string",
+            "number",
+            "integer",
+            "boolean",
+            "null"
+          ]
+        }
+      }
+    },
+    "message": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 500,
+      "description": "Human-readable explanation shown when the rule produces a finding."
+    },
+    "remediation": {
+      "type": "string",
+      "minLength": 1,
+      "maxLength": 2000,
+      "description": "Practical and product-neutral remediation guidance."
+    },
+    "references": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "object",
+        "additionalProperties": false,
+        "required": [
+          "framework",
+          "reference"
+        ],
+        "properties": {
+          "framework": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 100
+          },
+          "reference": {
+            "type": "string",
+            "minLength": 1,
+            "maxLength": 200
+          },
+          "url": {
+            "type": "string",
+            "format": "uri"
+          }
+        }
+      }
+    },
+    "tags": {
+      "type": "array",
+      "uniqueItems": true,
+      "items": {
+        "type": "string",
+        "pattern": "^[a-z0-9][a-z0-9_-]*$",
+        "maxLength": 50
+      }
+    }
+  }
+}
