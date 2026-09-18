@@ -1,1 +1,37 @@
+id: "OCC-REMOTE-001"
+version: "0.1.0"
 
+title: "Multi-factor authentication is not enabled for remote access"
+
+description: >-
+  Remote access without multi-factor authentication increases the risk of
+  unauthorised access when a password is stolen, reused, or guessed.
+
+category: "remote_access"
+severity: "high"
+
+condition:
+  path: "remote_access.mfa_enabled"
+  operator: "equals"
+  expected: false
+
+message: >-
+  Multi-factor authentication is not enabled for remote access.
+
+remediation: >-
+  Enable multi-factor authentication for every account permitted to access
+  organisational systems remotely. Prefer phishing-resistant authentication
+  methods where supported. Verify that MFA is enforced for both standard and
+  privileged accounts, and test the configuration before relying on it.
+
+references:
+  - framework: "CIS Controls v8"
+    reference: "Safeguard 6.3 — Require MFA for Externally-Exposed Applications"
+
+  - framework: "NIS2 Directive"
+    reference: "Article 21(2)(j) — Multi-factor authentication where appropriate"
+
+tags:
+  - "mfa"
+  - "remote-access"
+  - "authentication"
