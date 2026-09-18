@@ -59,6 +59,21 @@ The next steps are:
 The project is not yet ready for production use. Its interfaces and assessment rules may change during the development process.
 
 ## Roadmap
+OpenCyberCheck's initial development roadmap consists of six stages:
+
+**Architecture and Rule Schema:** Defining the project architecture, data model, threat model, and machine-readable security rule format.
+
+**Rule Engine:** Developing the core engine to load, validate, and evaluate transparent YAML or JSON security rules.
+
+**Assessment Profile:** Creating structured asset and security profiles, complete with sample input data and validation mechanisms.
+
+**Risk and Remediation:** Integrating severity classifications, security control references, and practical remediation guidance into the system.
+
+**Reporting and Interfaces:** Implementing human-readable reports and JSON/CSV outputs, alongside initial command-line or API interfaces.
+
+**Testing and Public Release:** Finalizing automated tests, documentation, and packaging to release the first publicly usable development release.
+
+The roadmap is subject to updates based on technical developments, user feedback, and available resources. Planned changes will be shared publicly in this project repository.
 
 ## Contributing
 
