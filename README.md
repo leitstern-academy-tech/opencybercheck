@@ -18,6 +18,19 @@ The toolkit may also support:
 - Educational institutions and training providers using transparent rules and sample scenarios to teach fundamental security controls and remediation processes in hands-on learning environments.
 
 ## Core components
+The OpenCyberCheck project will be structured around the following fundamental components:
+
+**Asset and Security Profile:** A structured YAML or JSON format used to define systems, user accounts, remote access services, backup arrangements, and other relevant security information.
+
+**Transparent Rule Engine:** A configurable mechanism that evaluates the provided data against clearly documented security rules.
+
+**Risk Prioritization:** A system that classifies findings based on severity, determining which issues users should address first.
+
+**Security Control Mapping:** A reference layer that links technical findings to relevant categories within security frameworks such as relevant security frameworks and regulatory references, including NIS2, CIS Controls and applicable BSI guidance without duplicating the protected standard texts.
+
+**Remediation Guidance:** Actionable and verifiable remediation steps for each identified security issue.
+
+**Reporting and Integration Formats:** Human-readable reports and machine-processable JSON or CSV outputs that enable the review, reuse, or integration of findings with other tools.
 
 ## Privacy and security principles
 
