@@ -44,7 +44,7 @@ def load_document(file_path: str | Path) -> dict[str, Any]:
             f"The top-level content must be an object: {path}"
         )
 
-    return return dict(document)
+    return dict(document)
 
 
 def validate_document(
