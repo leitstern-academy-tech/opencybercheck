@@ -1,5 +1,7 @@
 # OpenCyberCheck
 
+[![Tests](https://github.com/leitstern-academy-tech/opencybercheck/actions/workflows/tests.yml/badge.svg)](https://github.com/leitstern-academy-tech/opencybercheck/actions/workflows/tests.yml)
+
 Open-source cybersecurity assessment and remediation toolkit for European SMEs.
 
 ## Problem
