@@ -98,15 +98,20 @@ OpenCyberCheck will follow privacy-by-design and secure-by-default principles:
 **Non-Intrusive Operation:**  The initial version analyzes information provided directly by the user; it does not conduct intrusive testing or active penetration activities.
 
 ## Project status
-OpenCyberCheck is currently in the early planning and design phase. The project's public repository, initial scope, and open-source license have been established.
 
-The next steps are:
+OpenCyberCheck is currently a pre-alpha proof of concept. The repository includes:
 
-- Defining the technical architecture and rule schema.
-- Developing a minimal proof of concept (PoC).
-- Validating the initial security checks using sample data.
+- JSON schemas for assessment profiles and security rules.
+- A fictional sample assessment profile.
+- Initial rules covering remote-access MFA, backup restoration testing, and incident-response planning.
+- A deterministic Python rule evaluation engine.
+- Safe YAML and JSON loading with schema validation.
+- A command-line interface supporting human-readable and JSON reports.
+- Automated tests executed through GitHub Actions.
 
-The project is not yet ready for production use. Its interfaces and assessment rules may change during the development process.
+The project is not yet ready for production use. Its architecture, schemas, interfaces, rules, and reports may change during development.
+
+The next priorities are to expand test coverage, add further security rules, improve reporting, document the rule-authoring process, and prepare the first public development release.
 
 ## Roadmap
 OpenCyberCheck's initial development roadmap consists of six stages:
@@ -128,11 +133,11 @@ The roadmap is subject to updates based on technical developments, user feedback
 ## Contributing
 We welcome contributions, suggestions, and feedback. You can support the project, which is currently in its early development stage, by:
 
--Suggesting relevant use cases and security rules.
--Reviewing documentation and technical designs.
--Testing sample assessment profiles and reporting reproducible issues.
--Improving remediation guidance and security control mappings.
--Sharing non-sensitive sample data for testing purposes.
+- Suggesting relevant use cases and security rules.
+- Reviewing documentation and technical designs.
+- Testing sample assessment profiles and reporting reproducible issues.
+- Improving remediation guidance and security control mappings.
+- Sharing non-sensitive sample data for testing purposes.
 
 Before initiating substantial changes, please open an issue to discuss your proposed approach. Pull requests should be focused and include relevant documentation and tests where appropriate.
 
