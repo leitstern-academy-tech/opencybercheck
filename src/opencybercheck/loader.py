@@ -115,7 +115,7 @@ def load_rules(
 
     for rule_path in rule_paths:
         rule = load_document(rule_path)
-        validate_document_document(rule, schema, str(rule_path))
+        validate_document(rule, schema, str(rule_path))
 
         rule_id = rule["id"]
         if rule_id in rule_ids:
