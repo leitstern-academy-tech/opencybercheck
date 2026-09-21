@@ -35,6 +35,9 @@ dependencies = [
   "jsonschema>=4.20"
 ]
 
+[project.scripts]
+opencybercheck = "opencybercheck.cli:main"
+
 [project.optional-dependencies]
 dev = [
   "pytest>=8.0"
