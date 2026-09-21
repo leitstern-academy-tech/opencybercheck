@@ -105,3 +105,25 @@ def test_missing_profile_returns_error(capsys) -> None:
     assert exit_code == 2
     assert captured.out == ""
     assert "File does not exist" in captured.err
+
+def test_generated_report_matches_documented_sample(capsys) -> None:
+    documented_report_path = (
+        PROJECT_ROOT / "examples" / "sample-report.json"
+    )
+    arguments = [
+        *base_arguments(),
+        "--format",
+        "json",
+    ]
+
+    exit_code = main(arguments)
+    captured = capsys.readouterr()
+
+    generated_report = json.loads(captured.out)
+    documented_report = json.loads(
+        documented_report_path.read_text(encoding="utf-8")
+    )
+
+    assert exit_code == 0
+    assert captured.err == ""
+    assert generated_report == documented_report
