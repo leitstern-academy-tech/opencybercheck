@@ -1,1 +1,78 @@
-
+{
+  "report_version": "0.1",
+  "findings_count": 3,
+  "findings": [
+    {
+      "rule_id": "OCC-BACKUP-001",
+      "rule_version": "0.1.0",
+      "title": "Backup restoration test is overdue",
+      "category": "backups",
+      "severity": "high",
+      "message": "The most recent backup restoration test was performed more than 90 days ago.",
+      "remediation": "Perform a controlled restoration test using representative backup data. Verify that the restored data is complete, readable, and usable within the organisation's recovery objectives. Document the test result, address any failures, and establish a recurring restoration-test schedule.",
+      "references": [
+        {
+          "framework": "CIS Controls v8",
+          "reference": "Safeguard 11.5 — Test Data Recovery"
+        },
+        {
+          "framework": "NIS2 Directive",
+          "reference": "Article 21(2)(c) — Business continuity and backup management"
+        }
+      ],
+      "tags": [
+        "backup",
+        "recovery",
+        "resilience"
+      ]
+    },
+    {
+      "rule_id": "OCC-INCIDENT-001",
+      "rule_version": "0.1.0",
+      "title": "Documented incident response plan is missing",
+      "category": "incident_response",
+      "severity": "high",
+      "message": "The organisation does not have a documented incident response plan.",
+      "remediation": "Create and maintain an incident response plan that defines responsibilities, escalation paths, internal and external communication procedures, evidence handling, containment, recovery, and post-incident review activities. Assign an owner to the plan and test it regularly using realistic scenarios.",
+      "references": [
+        {
+          "framework": "CIS Controls v8",
+          "reference": "Safeguard 17.4 — Establish and Maintain an Incident Response Process"
+        },
+        {
+          "framework": "NIS2 Directive",
+          "reference": "Article 21(2)(b) — Incident handling"
+        }
+      ],
+      "tags": [
+        "incident-response",
+        "governance",
+        "resilience"
+      ]
+    },
+    {
+      "rule_id": "OCC-REMOTE-001",
+      "rule_version": "0.1.0",
+      "title": "Multi-factor authentication is not enabled for remote access",
+      "category": "remote_access",
+      "severity": "high",
+      "message": "Multi-factor authentication is not enabled for remote access.",
+      "remediation": "Enable multi-factor authentication for every account permitted to access organisational systems remotely. Prefer phishing-resistant authentication methods where supported. Verify that MFA is enforced for both standard and privileged accounts, and test the configuration before relying on it.",
+      "references": [
+        {
+          "framework": "CIS Controls v8",
+          "reference": "Safeguard 6.3 — Require MFA for Externally-Exposed Applications"
+        },
+        {
+          "framework": "NIS2 Directive",
+          "reference": "Article 21(2)(j) — Multi-factor authentication where appropriate"
+        }
+      ],
+      "tags": [
+        "mfa",
+        "remote-access",
+        "authentication"
+      ]
+    }
+  ]
+}
