@@ -38,6 +38,8 @@ The command validates the assessment profile and security rules before producing
 
 To produce a JSON report:
 
+An example of the expected output is available in [`examples/sample-report.json`](examples/sample-report.json).
+
 ```bash
 opencybercheck examples/sample-profile.yaml --format json
 ```
