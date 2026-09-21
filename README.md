@@ -8,6 +8,56 @@ SMEs often struggle to access affordable and transparent tools for assessing the
 ## Proposed solution
 OpenCyberCheck will provide an open-source, locally deployable toolkit designed to assess the cybersecurity posture of SMEs. The system analyzes structured asset and security data using transparent, customizable rules defined in machine-readable YAML or JSON formats. The toolkit prioritizes identified risks, maps technical findings to relevant security control references, and generates actionable recommendations for improvement. The results are presented in both human-readable reports and machine-processable formats, enabling users and other systems to review, reuse, and integrate the findings without reliance on a proprietary cloud platform.
 
+## Installation
+
+OpenCyberCheck currently requires Python 3.11 or later.
+
+Clone the repository and install the project locally:
+
+```bash
+git clone https://github.com/leitstern-academy-tech/opencybercheck.git
+cd opencybercheck
+python -m pip install --editable .
+```
+
+For development and testing, install the optional development dependencies:
+
+```bash
+python -m pip install --editable ".[dev]"
+```
+
+## Quick start
+
+Run an assessment using the included fictional sample profile:
+
+```bash
+opencybercheck examples/sample-profile.yaml
+```
+
+The command validates the assessment profile and security rules before producing a human-readable report.
+
+To produce a JSON report:
+
+```bash
+opencybercheck examples/sample-profile.yaml --format json
+```
+
+To save the JSON report to a file:
+
+```bash
+opencybercheck examples/sample-profile.yaml \
+  --format json \
+  --output report.json
+```
+
+Run the automated tests with:
+
+```bash
+python -m pytest
+```
+
+OpenCyberCheck is currently a pre-alpha project and should not yet be used as the sole basis for production security decisions.
+
 ## Target users
 OpenCyberCheck’s primary users are European SMEs seeking a practical way to assess and improve their cybersecurity posture without deploying complex commercial platforms.
 
