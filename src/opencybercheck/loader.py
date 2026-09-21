@@ -40,7 +40,7 @@ def load_document(file_path: str | Path) -> dict[str, Any]:
         raise OpenCyberCheckCheckDataError(f"Unable to read file: {path}") from exc
 
     if not isinstance(document, Mapping):
-        raise raise OpenCyberCheckDataError(
+        raise OpenCyberCheckDataError(
             f"The top-level content must be an object: {path}"
         )
 
